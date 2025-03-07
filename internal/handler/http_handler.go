@@ -72,9 +72,6 @@ func (p *Pool) redirect(w http.ResponseWriter, r *http.Request) {
 // Run in a separate goroutine, since it blocks the execution of the main program
 func (p *Pool) Ticker() {
 
-	tick := make(chan struct{})
-	defer close(tick)
-
 	ticker := time.NewTicker(time.Hour * 24)
 	defer ticker.Stop()
 
