@@ -1,0 +1,5 @@
+CREATE TABLE url_map (
+        url varchar(1000) PRIMARY KEY,
+        shortened_url varchar(30) unique,
+        date DATE default current_date
+)
